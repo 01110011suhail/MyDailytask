@@ -13,6 +13,9 @@ class Sec {
         Arrays.fill(secondarr, 5);
         System.out.println(Arrays.toString(secondarr));
 
+        int[] thirdarr = Arrays.copyOf(secondarr, 15);
+        System.out.println(Arrays.toString(thirdarr));
+
     }
 
     private static int[] getRandomArr(int len) {
