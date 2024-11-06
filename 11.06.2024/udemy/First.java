@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -14,6 +15,11 @@ public class First {
         oglist.sort(Comparator.naturalOrder());
         System.out.println(oglist);
 
+        ArrayList<Integer> op = new ArrayList<>(10);
+        for (int i = 0; i < 7; i++) {
+            op.add((i + 1) * 5);
+        }
+        System.out.println(op);
     }
 
 }
