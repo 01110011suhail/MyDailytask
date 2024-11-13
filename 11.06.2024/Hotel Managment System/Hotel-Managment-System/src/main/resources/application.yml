@@ -1,0 +1,24 @@
+#spring.application.name=Hotel-Managment-System
+
+
+server:
+  port:8080
+
+spring:
+  datasource:
+    username: root
+    password: Suhail*786
+    url: jdbc:mysql://localhost:3306/lakeside_hotel_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      format-sql: true
+
+    servlet:
+      multipart:
+      max-file-size: 5mb
+      max-request-size: 5mb
+      file-size-threshold: 2kb
