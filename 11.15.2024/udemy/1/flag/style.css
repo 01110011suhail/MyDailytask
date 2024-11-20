@@ -1,0 +1,37 @@
+*{
+    background-color: black;
+    /* margin: 0; */
+    padding: 0;
+}
+
+.outlet{
+    margin-top: 100px;
+}
+
+.flag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+} 
+
+.white{
+    position: relative;
+    
+}
+#chakra{
+    position: absolute;
+    width: 10%;
+    height: 20vh;
+
+}
+
+
+ img{
+    width: 50%;
+    height: 20vh;
+}
+
+#green{
+    background-color: green;
+}

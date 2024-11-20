@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            color: white;
+            border: 5px solid black;
+            display: inline-flex;
+            flex-direction: column;
+            flex-basis: 1000px;
+        }
+        .container > *{
+            flex-basis: 100px;
+        }
+
+        .green{
+            background-color: green;
+        }
+        .Blue{background-color: blue;}
+        .Yellow{background-color: yellow;}
+        .Orange{background-color: orange;}
+        .voilet{background-color: violet;}
+        .red{background-color: red;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="green">Green</div>
+        <div class="Blue">Blue</div>
+        <div class="Yellow">Yellow</div>
+        <div class="Orange">Orange</div>
+        <div class="voilet">Voilet</div>
+        <div class="red">Red</div>
+    </div>
+</body>
+</html>

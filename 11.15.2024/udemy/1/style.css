@@ -1,0 +1,15 @@
+#serif{
+    font-family:serif;
+}
+#sans{
+    font-family: sans-serif;
+}
+#cursive{
+    font-family: cursive;
+}
+#fantasy{
+    font-family: fantasy;
+}
+#monospace{
+    font-family: 'Courier New', Courier, monospace;
+}
