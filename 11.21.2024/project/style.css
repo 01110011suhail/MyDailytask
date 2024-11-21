@@ -1,0 +1,578 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+#hero ,#about,#projects{
+    background-image: url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header-logo{
+    font-size: 50px;
+    font-weight: 600;
+}
+.header-logo span{
+    color: green;
+}
+
+
+.section-box{
+    background: rgb(255, 255, 255,0.2);
+    backdrop-filter: blur(12px);
+    width: 85%;
+    height: 85vh;
+    border: 1px solid white;
+    box-shadow: inset 0 0 5px rgb(255,255 , 255,0.2);
+    border-radius: 10px;
+
+}
+.content-wrap{
+    padding: 20px 50px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.4s;
+}
+nav a{
+    list-style-type: none;
+}
+
+
+
+.nav-items{
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: capitalize;
+    justify-content: center;
+    position: relative;
+    
+}
+nav .active{
+    color: green;
+}
+
+.nav-items::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 85%;
+    height: 2px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1px whitesmoke;
+    transform: scale(0);
+    transition: 0.3s;
+    transform-origin: left;
+
+}
+.nav-items:hover::after{
+    transform: scale(1);
+
+}
+.hero-content{
+    color: whitesmoke;
+}
+
+.hero-content h3{
+    letter-spacing: 50px;
+    text-align: center;
+
+}
+
+.hero-content h1{
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: sans-serif;
+}
+.hero-content img{
+    width: 50%;
+    margin: -60px 0px 0px 240px;
+    animation: planet 40s linear infinite;
+}
+.btn {
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    display: flex;
+    justify-content: center;
+    margin: -80px 20px 0px 400px;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    }
+
+.btn:hover {
+    background-color: black /* Optional: Change background on hover 
+}
+
+.about{
+
+}
+
+.section-box{
+    width: 80%;
+    backdrop-filter: blur(12px);
+    width: 85%;
+    height: 85vh;
+    border: 1px solid white;
+    box-shadow: inset 0 0 5px rgb(255,255 , 255,0.2);
+    border-radius: 10px;
+}
+
+.content-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.left-grid{
+    padding: 10px 20px;
+    margin-top: 100px;
+    color: white;
+}
+.left-grid h3{
+    color: green;
+    font-family: sans-serif;
+    font-size: 20px;
+    animation: bottomIn 1s ease-in-out forwards ;
+
+}
+
+.left-grid h1{
+    font-family: sans-serif;
+    font-size: 40px;
+    animation: bottomIn 1s ease-in-out forwards ;
+
+}
+
+.left-grid p{
+    margin: 10px;
+    padding: 10px;
+    animation: bottomIn 1s ease-in-out forwards ;
+
+}
+.left-grid button{
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: green;
+    color: black;
+    animation: bottomIn 1s ease-in-out forwards ;
+
+}
+
+
+.image img{
+    width: 100%;
+    height: 80vh;
+    animation: zoomIn 1s ease-in-out forwards ;
+    animation-delay: 0.2s;
+    opacity: 0;
+} */
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#hero, #about, #projects {
+    background-image: url('images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Header Styles */
+.header-logo {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.header-logo span {
+    color: green;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-items {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-items:hover,
+.nav-items.active {
+    color: green;
+}
+
+.nav-items::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: green;
+    transition: width 0.3s;
+}
+
+.nav-items:hover::after {
+    width: 100%;
+}
+
+/* Section Box */
+.section-box {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    height: 85vh;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Content Wrap */
+.content-wrap {
+    padding: 20px 40px;
+}
+
+/* Hero Content */
+.hero-content {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.hero-content h3 {
+    letter-spacing: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.hero-image {
+    width: 50%;
+    margin: -60px ;
+    animation: spin 40s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn {
+    background: green;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+
+/* Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.left-grid {
+    padding: 20px;
+}
+
+.left-grid h3 {
+    color: green;
+    font-size: 1.2rem;
+}
+
+.left-grid h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.left-grid p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.left-grid button{
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: green;
+    color: black;
+    animation: bottomIn 1s ease-in-out forwards ;
+
+}
+/* Join Section Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form input:focus {
+    border-color: green;
+    outline: none;
+}
+
+form button {
+    width: fit-content;
+    align-self: flex-start;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: green;
+}
+
+footer .footer-social a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+/* Common Section Background */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.jpg); /* Reusing the same image */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: green;
+}
+
+footer .footer-social a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+    transition: transform 0.3s;
+}
+
+footer .footer-social a img:hover {
+    transform: scale(1.2);
+}
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    background-image: url(images/background.jpg); /* Same background */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+footer .footer-links a:hover {
+    color: green;
+}
+
+footer .footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+footer .footer-social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+footer .footer-social a img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
